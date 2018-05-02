@@ -1,0 +1,24 @@
+{
+  "name": "terrabrasilis-util",
+  "version": "0.0.1",
+  "description": "Utilities to use with terrabrasilis necessity and functionality",
+  "main": "terrabrasilis-util.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terrabrasilis/terrabrasilis-util.git"
+  },
+  "keywords": [
+    "utilities",
+    "stack",
+    "queue"
+  ],
+  "author": "Terrabraasilis team (André Carvalho, Jether Rodrigues, Luiz Assis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Terrabrasilis/terrabrasilis-util/issues"
+  },
+  "homepage": "https://github.com/Terrabrasilis/terrabrasilis-util#readme"
+}
