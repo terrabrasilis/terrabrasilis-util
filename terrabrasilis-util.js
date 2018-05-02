@@ -1,11 +1,15 @@
 module.exports = {
-    
+
     Stack: () => {
         //FIFO = first in, first out
         this.list = new Array();
     
         this.insert = function (obj){
-            this.list[this.list.length] = obj;        
+            list.forEach(element => {
+                if(element !== obj) {
+                    this.list[this.list.length] = obj;
+                }
+            });            
         }
     
         this.remove = function (){
@@ -36,7 +40,11 @@ module.exports = {
         this.list = new Array();
     
         this.insert = function(obj){
-            this.list[this.list.length] = obj;
+            list.forEach(element => {
+                if(element !== obj) {
+                    this.list[this.list.length] = obj;
+                }
+            });                       
         }
     
         this.remove = function(){
