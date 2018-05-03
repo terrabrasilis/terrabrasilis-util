@@ -1,6 +1,6 @@
 {
   "name": "terrabrasilis-util",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities to use with terrabrasilis necessity and functionality",
   "main": "terrabrasilis-util.js",
   "scripts": {
