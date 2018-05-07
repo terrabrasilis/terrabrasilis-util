@@ -3,11 +3,12 @@
         let list = new Array();
     
         let insert = function (obj){
-            list.forEach(element => {
-                if(element !== obj) {
-                    list[list.length] = obj;
-                }
-            });            
+            // list.forEach(element => {
+            //     if(element !== obj) {
+            //         list[list.length] = obj;
+            //     }
+            // }); 
+            list[list.length] = obj;           
         }
     
         let remove = function (){
@@ -36,6 +37,7 @@
             while (list.length > 0) {
                 remove();
             }
+            console.log("All list content removed. List size rigth now is [" + list.length + "]");
         }
 
         return {
@@ -52,11 +54,12 @@
         list = new Array();
     
         let insert = function(obj){
-            list.forEach(element => {
-                if(element !== obj) {
-                    list[list.length] = obj;
-                }
-            });                       
+            // list.forEach(element => {
+            //     if(element !== obj) {
+            //         list[list.length] = obj;
+            //     }
+            // });  
+            list[list.length] = obj;                     
         }
     
         let remove = function(){
@@ -85,13 +88,15 @@
             while (list.length > 0) {
                 remove();
             }
+            console.log("All list content removed. List size rigth now is [" + list.length + "]");
         }
 
         return {
             insert: insert,
             remove: remove,
             getFirst: getFirst,
-            getLength: getLength
+            getLength: getLength,
+            reset: reset
         }
     })(Queue || {});
 

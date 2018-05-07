@@ -1,6 +1,6 @@
 {
   "name": "terrabrasilis-util",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Utilities to use with terrabrasilis necessity and functionality",
   "main": "terrabrasilis-util.js",
   "scripts": {
@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/Terrabrasilis/terrabrasilis-util/issues"
   },
-  "homepage": "https://github.com/Terrabrasilis/terrabrasilis-util#readme"
+  "homepage": "https://github.com/Terrabrasilis/terrabrasilis-util#readme",
+  "dependencies": {}
 }
