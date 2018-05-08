@@ -16,7 +16,7 @@
     "queue"
   ],
   "author": "Terrabraasilis team (André Carvalho, Jether Rodrigues, Luiz Assis)",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Terrabrasilis/terrabrasilis-util/issues"
   },
