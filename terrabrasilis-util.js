@@ -2,16 +2,30 @@
         //FIFO = first in, first out
         let list = new Array();
     
-        let insert = function (obj){
-            // list.forEach(element => {
-            //     if(element !== obj) {
-            //         list[list.length] = obj;
-            //     }
-            // }); 
-            list[list.length] = obj;           
+        let insert = function (obj) {            
+            if (obj == 'undefined' || obj === null)
+                return;
+            
+            let exists = false;    
+            for (let index = 0; index < list.length; index++) {                
+                if (list[index].zoom === obj.zoom) {
+                    exists = true;   
+                } 
+            }
+                        
+            if (!exists) {
+                console.log("Stack -> ");
+                console.log(obj);
+                list[list.length] = obj;
+            }
+
+            if (exists) {
+                console.log("Stack exists -> ");
+                console.log(obj);                
+            }
         }
     
-        let remove = function (){
+        let remove = function () {
             if(list.length > 0){
                 var obj = list[list.length - 1];
                 list.splice(list.length - 1,1);
@@ -21,7 +35,7 @@
             }
         }
     
-        let getLast = function (){
+        let getLast = function () {
             if(list.length > 0){
                 return list[list.length - 1];
             }else{
@@ -53,16 +67,32 @@
         // FILO = first in, last out
         list = new Array();
     
-        let insert = function(obj){
-            // list.forEach(element => {
-            //     if(element !== obj) {
-            //         list[list.length] = obj;
-            //     }
-            // });  
-            list[list.length] = obj;                     
+        let insert = function(obj) {
+            if (obj == 'undefined' || obj === null)
+                return;
+            
+            let exists = false;    
+            for (let index = 0; index < list.length; index++) {                
+                if (list[index].zoom === obj.zoom) {
+                    exists = true; 
+                    console.log("The object already exists -> ");
+                    console.log(obj);  
+                } 
+            }
+                      
+            if (!exists) {
+                console.log("Queue -> ");
+                console.log(obj);
+                list[list.length] = obj;
+            }  
+            
+            if (exists) {
+                console.log("Queue exists -> ");
+                console.log(obj);                
+            }
         }
     
-        let remove = function(){
+        let remove = function() {
             if(list.length > 0){
                 var obj = list[0];
                 list.splice(0,1);
@@ -72,7 +102,7 @@
             }
         }
     
-        let getFirst = function(){
+        let getFirst = function() {
             if(list.length > 0){
                 return list[0];
             }else{
