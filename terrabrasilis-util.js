@@ -14,15 +14,15 @@
             }
                         
             if (!exists) {
-                console.log("Stack -> ");
-                console.log(obj);
+                //console.log("Stack -> ");
+                //console.log(obj);
                 list[list.length] = obj;
             }
 
-            if (exists) {
+            /*if (exists) {
                 console.log("Stack exists -> ");
                 console.log(obj);                
-            }
+            }*/
         }
     
         let remove = function () {
@@ -51,7 +51,7 @@
             while (list.length > 0) {
                 remove();
             }
-            console.log("All list content removed. List size rigth now is [" + list.length + "]");
+            //console.log("All list content removed. List size rigth now is [" + list.length + "]");
         }
 
         return {
@@ -75,21 +75,21 @@
             for (let index = 0; index < list.length; index++) {                
                 if (list[index].zoom === obj.zoom) {
                     exists = true; 
-                    console.log("The object already exists -> ");
-                    console.log(obj);  
+                    //console.log("The object already exists -> ");
+                    //console.log(obj);  
                 } 
             }
                       
             if (!exists) {
-                console.log("Queue -> ");
-                console.log(obj);
+                //console.log("Queue -> ");
+                //console.log(obj);
                 list[list.length] = obj;
             }  
             
-            if (exists) {
+            /*if (exists) {
                 console.log("Queue exists -> ");
                 console.log(obj);                
-            }
+            }*/
         }
     
         let remove = function() {
@@ -118,7 +118,7 @@
             while (list.length > 0) {
                 remove();
             }
-            console.log("All list content removed. List size rigth now is [" + list.length + "]");
+            //console.log("All list content removed. List size rigth now is [" + list.length + "]");
         }
 
         return {
