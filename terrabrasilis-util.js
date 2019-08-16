@@ -2,7 +2,7 @@ var Stack, Queue
 
 Stack = (function () {
   // FIFO = first in, first out
-  const list = []
+  var list = []
 
   const insert = function (obj) {
     if (obj === 'undefined' || obj === null) { return }
