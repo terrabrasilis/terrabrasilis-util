@@ -1,9 +1,11 @@
-var Stack = (function () {
+var Stack, Queue
+
+Stack = (function () {
   // FIFO = first in, first out
-  const list = new Array()
+  const list = []
 
   const insert = function (obj) {
-    if (obj == 'undefined' || obj === null) { return }
+    if (obj === 'undefined' || obj === null) { return }
 
     let exists = false
     for (let index = 0; index < list.length; index++) {
@@ -62,12 +64,12 @@ var Stack = (function () {
   }
 })(Stack || {})
 
-var Queue = (function () {
+Queue = (function () {
   // FILO = first in, last out
-  list = new Array()
+  var list = []
 
   const insert = function (obj) {
-    if (obj == 'undefined' || obj === null) { return }
+    if (obj === 'undefined' || obj === null) { return }
 
     let exists = false
     for (let index = 0; index < list.length; index++) {
