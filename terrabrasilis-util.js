@@ -1,4 +1,6 @@
-var Stack, Queue
+const workerpool = require('workerpool');
+
+var Stack, Queue, TilesWorkerPool
 
 Stack = (function () {
   // FIFO = first in, first out
@@ -130,4 +132,32 @@ Queue = (function () {
   }
 })(Queue || {})
 
-module.exports = { Stack, Queue }
+TilesWorkerPool = (function () 
+{
+  let poolOptions = 
+  {
+    minWorkers: 1,
+    maxWorkers: 20,
+    workerTerminateTimeout: 10000
+  }
+   const pool = workerpool.pool(poolOptions);
+
+  const addJob = function (job, callback, params) 
+  {
+    pool.exec(job, params)
+    .then(function (result)
+    {
+      callback(true, result); // will output 55
+    })
+    .catch(function (err)
+    {
+      callback(false, err);
+    });
+  } 
+
+  return {
+    addJob: addJob
+  }
+})(TilesWorkerPool || {})
+
+module.exports = { Stack, Queue, TilesWorkerPool }
