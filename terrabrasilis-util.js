@@ -133,27 +133,27 @@ Queue = (function () {
 })(Queue || {})
 
 TilesWorkerPool = (function () 
-{
+{ 
   let poolOptions = 
   {
-    minWorkers: 1,
+    minWorkers: 5,
     maxWorkers: 20,
     workerTerminateTimeout: 10000
   }
-   const pool = workerpool.pool(poolOptions);
+  const pool = workerpool.pool(poolOptions);
 
-  const addJob = function (job, callback, params) 
+  const addJob = function (id, job, callback, tilesControl, params) 
   {
     pool.exec(job, params)
-    .then(function (result)
+    .then(function (result, controller)
     {
-      callback(true, result); // will output 55
+      callback(id, true, result, tilesControl); // will output 55
     })
     .catch(function (err)
     {
-      callback(false, err);
+      callback(id, false, err, tilesControl);
     });
-  } 
+  }
 
   return {
     addJob: addJob
