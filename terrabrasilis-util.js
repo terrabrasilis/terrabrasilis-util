@@ -145,7 +145,7 @@ TilesWorkerPool = (function ()
   const addJob = function (id, job, callback, tilesControl, params) 
   {
     pool.exec(job, params)
-    .then(function (result, controller)
+    .then(function (result)
     {
       callback(id, true, result, tilesControl); // will output 55
     })
